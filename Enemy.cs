@@ -43,6 +43,6 @@ public class Enemy : MonoBehaviour
     private void Shoot()
     {
         GameObject projectile = Instantiate(projectilePrefab, shootPoint.position, Quaternion.identity);
-        projectile.GetComponent<Rigidbody2D>().velocity = new Vector2(-5f, 0); // Shoots left
+        projectile.GetComponent<Rigidbody2D>().linearVelocity = new Vector2(-5f, 0); // Shoots left
     }
 }

@@ -23,7 +23,7 @@ public class PlayerShooting : MonoBehaviour
     {
         GameObject projectile = Instantiate(projectilePrefab, shootPoint.position, Quaternion.identity);
         float direction = transform.localScale.x;
-        projectile.GetComponent<Rigidbody2D>().velocity = new Vector2(direction * 10f, 0);
+        projectile.GetComponent<Rigidbody2D>().linearVelocity = new Vector2(direction * 10f, 0);
 
         // Flip projectile if facing left
         if (direction < 0)

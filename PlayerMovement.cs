@@ -15,10 +15,10 @@ public class PlayerMovement : MonoBehaviour
     private void Update()
     {
         float horizontalInput = Input.GetAxis("Horizontal");
-        body.velocity = new Vector2(horizontalInput * speed, body.velocity.y);
+        body.linearVelocity = new Vector2(horizontalInput * speed, body.linearVelocity.y);
 
         if (Input.GetKey(KeyCode.Space))
-            body.velocity = new Vector2(body.velocity.x, speed);
+            body.linearVelocity = new Vector2(body.linearVelocity.x, speed);
 
         if (horizontalInput > 0.01f)
             transform.localScale = Vector3.one;
